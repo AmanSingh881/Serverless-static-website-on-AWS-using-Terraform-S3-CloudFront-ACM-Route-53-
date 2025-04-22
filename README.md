@@ -17,4 +17,4 @@ Something new:
 - 🔄 **AWS Lambda** – Automatically invalidates CloudFront cache when S3 content is updated
 ---
 
-![Project Architecture](assets/architecture-diagram.png)
+![Project Architecture](assets/staticWebHostingS3.png)
