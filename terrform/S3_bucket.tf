@@ -34,9 +34,17 @@ module "s3_bucket" {
     }
   }
 
+  #bucket policy
+  # depends_on = [ module.cloudfront ]
+  attach_policy = true
+  policy        = data.aws_iam_policy_document.cloudfront_s3_policy.json
+
   tags = {
     terraform =  "True"
     Name        = "My bucket"
     Environment = "Dev"
   }
 }
+
+
+
