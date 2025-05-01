@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Static Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    main {
+      margin-top: 2rem;
+    }
+
+    img.arch-diagram {
+      max-width: 90%;
+      height: auto;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Static Website</h1>
+  </header>
+
+  <main>
+    <p>This site is hosted on AWS using S3, CloudFront, Route 53, ACM, and Lambda — deployed using Terraform.</p>
+    
+    <!-- 📷 Architecture Diagram -->
+    <img src="/assets/architecture-diagram.png" alt="Deployment Architecture" class="arch-diagram" />
+    
+    <p>🚀 Built with ❤️ in the cloud.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>

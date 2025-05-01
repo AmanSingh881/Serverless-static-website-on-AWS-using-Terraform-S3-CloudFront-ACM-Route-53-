@@ -13,8 +13,6 @@ This infrastructure includes:
 - 📡 **Amazon Route 53** – Manages DNS routing to the CloudFront distribution.
 - 📦 **Terraform** – Infrastructure as Code (IaC) used to manage and deploy all resources in a modular way.
 
-Something new:
-- 🔄 **AWS Lambda** – Automatically invalidates CloudFront cache when S3 content is updated
 ---
 
-![Project Architecture](assets/architecture-diagram.png)
+![Project Architecture](assets/staticWebHostingS3.png)
