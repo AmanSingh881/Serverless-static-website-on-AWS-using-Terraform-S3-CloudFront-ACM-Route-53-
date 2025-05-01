@@ -1,11 +1,9 @@
 data "aws_acm_certificate" "example_cert" {
-  domain   = "amansingh.xyz"
+  domain   = var.domain_name
   statuses = ["ISSUED"]
   most_recent = true
 
-  tags = {
-    "terraform" = true
-  }
+  tags = var.acm_tags
 }
 
 output "certificate_arn" {

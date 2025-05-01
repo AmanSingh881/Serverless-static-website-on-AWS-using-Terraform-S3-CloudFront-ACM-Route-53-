@@ -1,9 +1,9 @@
 module "cloudfront" {
   source  = "terraform-aws-modules/cloudfront/aws"
   version = "4.1.0"
-  aliases = ["amansingh.xyz"]
+  aliases = [var.cloudfront_aliases]
   comment = "CloudFront distribution for S3 bucket static content"
-  default_root_object = "website/index.html"
+  default_root_object = var.cloudfront_default_root_object
   enabled = true
 
   # Price class
@@ -66,8 +66,5 @@ create_origin_access_identity = true
     }
   ]
 
-  tags = {
-    Environment = "production"
-    Project     = "cloudfront-s3"
-  }
+  tags = var.cloudfront_tags
 }

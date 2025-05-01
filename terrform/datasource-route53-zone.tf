@@ -1,6 +1,6 @@
 # Get DNS information from AWS Route53
 data "aws_route53_zone" "mydomain" {
-  name         = "amansingh.xyz"
+  name         = var.domain_name
   # private_zone = false
 }
 

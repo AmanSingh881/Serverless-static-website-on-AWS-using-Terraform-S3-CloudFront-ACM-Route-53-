@@ -8,7 +8,7 @@ module "s3_bucket" {
   version = "4.7.0"
 
 
-  bucket = format("%s.%s","mybucket",random_id.random_hex.hex)
+  bucket = format("%s.%s",var.s3_bucket_name,random_id.random_hex.hex)
   acl    = "private"
 
 
@@ -39,11 +39,7 @@ module "s3_bucket" {
   attach_policy = true
   policy        = data.aws_iam_policy_document.cloudfront_s3_policy.json
 
-  tags = {
-    terraform =  "True"
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+  tags = var.S3_tags
 }
 
 
